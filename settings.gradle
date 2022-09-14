@@ -25,3 +25,6 @@ dependencyResolutionManagement {
 rootProject.name = "EpicTools"
 include ':app'
 include ':epictool'
+include ':epic-annotation'
+include ':epic-processor'
+include ':epic-api'
