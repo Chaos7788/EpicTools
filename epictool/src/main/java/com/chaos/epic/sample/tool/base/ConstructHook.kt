@@ -8,6 +8,9 @@ abstract class ConstructHook constructor() : BaseMethodHook() {
 
     private var methodMap: Map<String, MethodAndParamType>? = null
 
+    /**
+     * @param methodMap  key:method name, value: MethodHood and method param
+     */
     constructor(methodMap: Map<String, MethodAndParamType>) : this() {
         this.methodMap = methodMap
     }

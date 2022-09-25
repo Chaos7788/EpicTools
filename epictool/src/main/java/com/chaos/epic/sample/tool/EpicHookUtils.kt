@@ -7,18 +7,19 @@ import de.robv.android.xposed.DexposedBridge
 
 object EpicHookUtils {
 
+    @JvmStatic
     fun <T> hookAllConstruct(className: String, methodHook: ConstructHook) {
         val aClass: Class<T>? = findClass(className)
         aClass?.also {
             hookAllConstruct(it, methodHook)
         }
     }
-
+    @JvmStatic
     fun <T> hookAllConstruct(clazz: Class<T>, methodHook: ConstructHook) {
         DexposedBridge.hookAllConstructors(clazz, methodHook)
     }
 
-
+    @JvmStatic
     fun <T> hookMethod(
         className: String,
         methodName: String,
@@ -31,7 +32,7 @@ object EpicHookUtils {
         }
     }
 
-
+    @JvmStatic
     fun <T> hookMethod(
         clazz: Class<T>,
         methodName: String,

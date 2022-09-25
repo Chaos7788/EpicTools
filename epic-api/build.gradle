@@ -37,4 +37,9 @@ dependencies {
 
     implementation project(path: ':epic-annotation')
     annotationProcessor project(path: ':epic-processor')
+
+    implementation project(path:':epictool')
+    compileOnly project(':flat_dir:epic-lib')
+    compileOnly project(':flat_dir:exposed-lib')
+    compileOnly project(':flat_dir:free-reflect-lib')
 }
